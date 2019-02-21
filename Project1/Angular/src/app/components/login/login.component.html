@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Login</h2>
+  <hr>
+
+  <label for="email">Email: </label>
+  <input (keydown.enter)="login()" id="email" type="text" [(ngModel)]="email">
+  <br>
+  <label for="password">Password: </label>
+  <input (keydown.enter)="login()" id="password" type="password" [(ngModel)]="password">
+
+  <button (click)="login()">LOGIN</button>
+
+  <p *ngIf="loginFailure">Invalid Credentials</p>
+</div>            

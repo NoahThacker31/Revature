@@ -1,0 +1,17 @@
+.container {
+    border: 1px solid black;
+    margin: 0 auto;
+    margin-top: 5%;
+    background: skyblue; 
+    padding: 20px;
+    width: 25%;
+}
+
+input {
+    display: block;
+    width: 100%;
+}
+
+button {
+    margin: 5px;
+}
