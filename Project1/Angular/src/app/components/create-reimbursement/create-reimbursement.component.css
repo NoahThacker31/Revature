@@ -1,0 +1,37 @@
+h2 {
+	text-align: center;
+	font-size: 25px;
+}
+
+.reimbursement-form {
+	border: solid 1px black;
+	width: 450px;
+	text-align: left;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(#777, #444);
+	color: #fff;
+}
+
+.input-label {
+	align-content: left;
+	padding: 5px auto;
+	padding-left: 5px;
+	margin: 5px auto;
+	margin-left: 5px;
+}
+
+.input {
+	width: 95%;
+	padding: 5px;
+	margin: 5px;
+}
+
+#type {
+	width: 80px;
+}
+
+#submit-button {
+	position: relative;
+	width: 100%;
+}

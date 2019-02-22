@@ -1,9 +1,10 @@
 <div class="container">
-  <h2>Welcome back, {{firstname | titlecase}} {{lastname | titlecase}}.</h2>
+  <h2>Welcome {{firstname | titlecase}} {{lastname | titlecase}}.</h2>
   <ol>
     <li routerLink="/main/create-reimbursement">CREATE</li>
     <li routerLink="/main/view-reimbursements">VIEW</li>
-    <li routerLink="/main/process-reimbursements">PROCESS</li>
+    <li *ngIf='isManager' routerLink="/main/process-reimbursements">PROCESS</li>
   </ol>
-  <input (click)="logout()" type="submit">
+  <router-outlet></router-outlet>
+  <button id="logoutButton" (click)="logout()">LOGOUT</button>
 </div>

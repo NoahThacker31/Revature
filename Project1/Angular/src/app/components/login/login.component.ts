@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 import { HttpXsrfCookieExtractor } from '@angular/common/http/src/xsrf';
-import { userInfo } from 'os';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -15,6 +14,7 @@ export class LoginComponent implements OnInit {
 
   email = '';
   password = '';
+  loginFailure = false;
 
   constructor(private loginService: LoginService,
               private router: Router,
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
       console.log(this.cookieService.get('userRole'));
       this.router.navigateByUrl('/main');
     }, (err) => {
+      this.loginFailure = true;
       console.log(err);
     });
   }

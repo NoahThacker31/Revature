@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { MainComponent } from './components/main/main.component';
+import { ProcessReloaderComponent } from './components/process-reloader/process-reloader.component';
 
 const routes: Routes = [
   {
@@ -25,12 +26,16 @@ const routes: Routes = [
         component: CreateReimbursementComponent
       },
       {
-        path: 'process-reimbursement',
+        path: 'view-reimbursements',
+        component: ViewReimbursementsComponent
+      },
+      {
+        path: 'process-reimbursements',
         component: ProcessReimbursementsComponent
       },
       {
-        path: 'view-reimbursement',
-        component: ViewReimbursementsComponent
+        path: 'process-reloader',
+        component: ProcessReloaderComponent
       }
     ]
   }

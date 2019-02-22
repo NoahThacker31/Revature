@@ -13,6 +13,7 @@ import { ViewReimbursementsComponent } from './components/view-reimbursements/vi
 import { ProcessReimbursementsComponent } from './components/process-reimbursements/process-reimbursements.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { ProcessReloaderComponent } from './components/process-reloader/process-reloader.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CookieService } from 'ngx-cookie-service';
     MainComponent,
     CreateReimbursementComponent,
     ViewReimbursementsComponent,
-    ProcessReimbursementsComponent
+    ProcessReimbursementsComponent,
+    ProcessReloaderComponent
   ],
   imports: [
     BrowserModule,

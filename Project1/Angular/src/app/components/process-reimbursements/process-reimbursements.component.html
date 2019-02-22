@@ -1,3 +1,29 @@
-<p>
-  process-reimbursements works!
-</p>
+<div class="process-reimbursement">
+  <h2>Process Reimbursements</h2>
+  <hr>
+  <table class="table table-bordered table-hover" *ngIf="reimbursements">
+    <th>Id</th>
+    <th>Author</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Status</th>
+    <th>Submitted</th>
+    <th>Resolver</th>
+    <th>Resolved</th>
+    <th>Process</th>
+    <tr *ngFor="let reimb of reimbursements; let i = index">
+      <td>{{reimb.id}}</td>
+      <td>{{reimb.authorid}}</td>
+      <td style="text-align: right;">{{reimb.amount | currency}}</td>
+      <td>{{reimb.description}}</td>
+      <td>{{reimb.type}}</td>
+      <td>{{reimb.status}}</td>
+      <td>{{reimb.submitted | date:"MM/dd/yyyy"}}</td>
+      <td>{{reimb.resolver}}</td>
+      <td>{{reimb.resolved | date:"MM/dd/yyyy"}}</td>
+      <td><button (click)="processReimb(i, 2)">Approve</button><button (click)="processReimb(i, 3)">Deny</button></td>
+    </tr>
+  </table>
+</div>
+<hr>

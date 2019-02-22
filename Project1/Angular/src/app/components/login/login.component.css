@@ -2,9 +2,18 @@
     border: 1px solid black;
     margin: 0 auto;
     margin-top: 5%;
-    background: skyblue; 
+    background: url(https://jackrugile.com/images/misc/noise-diagonal.png), linear-gradient(rgb(166, 186, 226), rgb(123, 152, 212));
     padding: 20px;
     width: 25%;
+    color: black;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    text-align: center;
 }
 
 input {
@@ -14,4 +23,7 @@ input {
 
 button {
     margin: 5px;
+    position: relative;
+    left: 280px;
+    top: 10px;
 }

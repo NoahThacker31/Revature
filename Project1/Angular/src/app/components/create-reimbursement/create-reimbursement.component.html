@@ -1,3 +1,24 @@
-<p>
-  create-reimbursement works!
-</p>
+<div class="reimbursement-form">
+  <h2>Create Reimbursement</h2>
+  <hr>
+  <label class="input-label" for="amount">Amount</label>
+  <br>
+  <input class="input" (keydown.enter)="submitReimb()" id="amount" type="currency" [(ngModel)]="amount">
+  <br>
+  <label class="input-label" for="description">Description: </label>
+  <br>
+  <input class="input" (keydown.enter)="submitReimb()" id="description" type="text" [(ngModel)]="description">
+  <br>
+  <label class="input-label" for="type">Type</label>
+  <br>
+  <select class="input" id="type" [(ngModel)]="type">
+    <option value="1">Lodging</option>
+    <option value="2">Travel</option>
+    <option value="3">Food</option>
+    <option value="4">Other</option>
+  </select>
+  <br>
+  <br>
+  <button id="submit-button" (click)="submitReimb()">SUBMIT</button>
+</div>
+<hr>

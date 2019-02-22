@@ -1,3 +1,31 @@
-<p>
-  view-reimbursements works!
-</p>
+<div class="view-reimbursement">
+  <h2>View Reimbursements</h2>
+  <hr>
+  <ol>
+    <li (click)="viewMyReimbursements()">My Reimbursements</li>
+    <li (click)="viewAllReimbursements()" *ngIf="isManager">All Reimbursements</li>
+  </ol>
+  <table class="table table-bordered table-hover" *ngIf="reimbursements">
+    <th>Id</th>
+    <th>Author</th>
+    <th>Amount</th>
+    <th>Description</th>
+    <th>Type</th>
+    <th>Status</th>
+    <th>Submitted</th>
+    <th>Resolver</th>
+    <th>Resolved</th>
+    <tr *ngFor="let reimb of reimbursements">
+      <td>{{reimb.id}}</td>
+      <td>{{reimb.authorid}}</td>
+      <td style="text-align: right;">{{reimb.amount | currency}}</td>
+      <td>{{reimb.description}}</td>
+      <td>{{reimb.type}}</td>
+      <td>{{reimb.status}}</td>
+      <td>{{reimb.submitted | date:"MM/dd/yyyy"}}</td>
+      <td>{{reimb.resolver}}</td>
+      <td>{{reimb.resolved | date:"MM/dd/yyyy"}}</td>
+    </tr>
+  </table>
+</div>
+<hr>
